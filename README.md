@@ -16,7 +16,7 @@ Whether you're a builder, researcher, designer, or visionary, this is your launc
 | 🗳️ Judging Period | 10/22/2025 |
 | 🏆 Winners Announced | 11/11/2025 |
 
-> *All times are in UTC. Join our [Telegram](https://t.me/socialblockverify) or [X Community]([https://x.com/i/communities/123456789](https://x.com/i/communities/1883598415004573838)) for updates.*
+> *All times are in UTC. Join our [Telegram](https://t.me/socialblockverify) or [X Community]([https://x.com/i/communities/123456789](https://x.com/i/communities/1883598415004573838])) for updates.*
 
 ---
 
