@@ -1,3 +1,4 @@
+````markdown
 # 🤝 Contributing to SocialBlock AI Hackathon
 
 Thank you for your interest in contributing to the **SocialBlock AI Hackathon**! Whether you're submitting a hackathon project, improving documentation, or helping others, we appreciate your involvement.
