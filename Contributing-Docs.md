@@ -1,47 +1,30 @@
 ```markdown
-# 📝 CONTRIBUTING_DOCS.md
+# 📝 Contributing to Documentation
 
-Welcome to the **Documentation Contribution Guide** for the [SocialBlock AI Hackathon](https://github.com/SocialBlockLTD/socialblock-ai-hackathon)!
+Thank you for your interest in improving the documentation for the **SocialBlock AI Hackathon**! Clear, useful, and accessible documentation helps us grow the community and accelerate innovation in AI + SocialFi.
 
-If you're looking to improve, fix, or add to the documentation — you’re in the right place. Whether it’s a typo fix, new tutorial, clarification, or best practices guide, every contribution helps make the hackathon better for all participants.
-
----
-
-## 📚 What You Can Contribute
-
-You can contribute to the documentation by:
-
-- Fixing typos, broken links, or grammar
-- Improving clarity and formatting
-- Adding missing sections to guides
-- Creating tutorials for starter kits or toolchains
-- Writing architectural or design explanations
-- Translating key documents (optional)
-- Providing SocialFi + AI integration examples
+This guide explains how to contribute to the documentation, including style guidelines, content types, and submission steps.
 
 ---
 
-## 🗂️ Docs Structure
+## 📁 Documentation Structure
 
-The documentation lives primarily under:
+Documentation is located in the `/docs/` directory of this repository:
 
 ```
 
 /docs
-├── index.md                  # Entry point
-├── getting-started.md        # Initial setup and onboarding
-├── tutorials/
-│    ├── build-with-langchain.md
-│    └── deploy-to-solana.md
-├── guides/
-│    ├── socialfi-integration.md
-│    └── zk-reputation-layer.md
-├── glossary.md               # Terms and concepts
-└── faq.md
+├── index.md                 # Main entry point
+├── getting-started.md       # Onboarding and setup
+├── tutorials/               # Step-by-step how-to guides
+├── guides/                  # Deep dives into systems & architecture
+├── glossary.md              # Definitions and protocol terms
+├── faq.md                   # Frequently asked questions
+└── contributing\_docs.md     # This file
 
 ```
 
-Starter kits also include internal docs in their respective folders:
+Additional documentation may exist inside specific starter kits:
 ```
 
 /starter-kits/<kit-name>/README.md
@@ -50,104 +33,137 @@ Starter kits also include internal docs in their respective folders:
 
 ---
 
-## 🧑‍💻 How to Contribute Docs
+## ✍️ What You Can Contribute
 
-1. **Fork the repository** to your GitHub account.
+You can help by contributing:
 
-2. **Clone your fork**:
+- ✅ Fixes for typos, grammar, formatting
+- 📘 New tutorials (e.g. building AI validators or bots)
+- 🧠 In-depth guides (e.g. zkML, agent reputation scoring)
+- 📦 Starter kit usage or deployment instructions
+- 🧩 Glossary terms and protocol-specific definitions
+- 🌐 Translations (optional; coming soon)
+
+---
+
+## 🛠 How to Contribute Docs
+
+1. **Fork the repository**
+
+   Click the `Fork` button at the top-right of this page.
+
+2. **Clone your fork locally**
+
    ```bash
    git clone https://github.com/YOUR_USERNAME/socialblock-ai-hackathon.git
    cd socialblock-ai-hackathon
 ````
 
-3. **Create a new branch**:
+3. **Create a new branch**
+
+   Name your branch clearly, e.g.:
 
    ```bash
-   git checkout -b docs/add-tutorial-langchain-scoring
+   git checkout -b docs/add-ai-agent-tutorial
    ```
 
-4. **Add or edit documentation** in the appropriate folder (`/docs` or `/starter-kits/...`).
+4. **Write or edit markdown files in `/docs`**
 
-5. **Write clear, markdown-based documentation**, and follow these conventions:
+   Follow our style and formatting guidelines (see below).
 
-   * Use `#` and `##` for heading structure
-   * Include code blocks with syntax highlighting
-   * Prefer active voice
-   * Link to other docs with relative paths when possible
-   * Use visuals, diagrams, or screenshots when helpful
-
-6. **Commit your changes**:
+5. **Commit and push your changes**
 
    ```bash
    git add .
-   git commit -m "docs: add LangChain scoring tutorial"
+   git commit -m "docs: add tutorial for AI Agent with LangChain"
+   git push origin docs/add-ai-agent-tutorial
    ```
 
-7. **Push and create a pull request** to the `main` branch of the official repo.
+6. **Open a Pull Request**
+
+   Go to your fork on GitHub and click **"Compare & pull request"**.
 
 ---
 
-## 🧾 Markdown Style Guide
+## 🧑‍🎨 Writing Guidelines
 
-* Use `camelCase` or `snake_case` for code variables
-* Use backticks \` for inline code
-* Prefer numbered steps (`1.`, `2.`, `3.`) over unordered lists for sequences
-* Add anchors for sections if linking internally
-* Include `## Prerequisites` and `## Outcomes` in tutorials
-* Limit lines to \~100 characters for readability
+### Markdown Formatting
 
----
+* Use `#`, `##`, and `###` for logical headings
+* Use triple backticks for code blocks with language tags:
+  \`\`\`ts
+  const hello = 'world';
+  \`\`\`
+* Use tables, checklists, and lists when helpful
+* Keep paragraphs short and scannable
+* Prefer relative links (e.g. `../tutorials/...`) over full URLs
 
-## 💡 Template: Tutorial Structure
+### Content Style
 
-Here’s a recommended format for new tutorials:
+* Use clear, concise language
+* Avoid jargon unless you define it
+* Use the active voice
+* Use consistent terminology: "reputation agent," "SocialBlock chain," etc.
+
+### Tutorial Template
 
 ```markdown
-# Build a LangChain-Powered Reputation Score AI
+# Title of Tutorial
 
 ## 🧩 Overview
 
-In this tutorial, you'll build an AI agent using LangChain that dynamically updates on-chain reputation scores.
+What you're building and why it matters.
 
 ## ✅ Prerequisites
 
-- Node.js 18+
-- LangChain installed
-- SocialBlock starter kit cloned
+- Node.js v18+
+- SocialBlock SDK
+- Solana wallet (Phantom)
 
 ## 🚀 Steps
 
-1. Set up your project folder...
-2. Configure the agent memory...
+1. Clone the starter repo
+2. Set up the config file
+3. Run the scoring agent
 
 ## 🧠 Outcome
 
-You’ll learn how to integrate LangChain with zk-Reputation scoring and see results on the Validator Dashboard.
+The agent will write a score to the ARP layer based on Telegram messages.
 ```
+
+---
+
+## 📚 Suggestions for New Docs
+
+If you're unsure what to contribute, here are ideas:
+
+* 🛡️ “How to write a zkML proof for moderation output”
+* 🤖 “Creating a Telegram Bot using SocialBlock reputation scores”
+* 🧱 “Deploying a validator node with testnet config”
+* 🪄 “Building your own AI agent to propose governance votes”
 
 ---
 
 ## 👮 Code of Conduct
 
-All documentation contributors must follow our [Code of Conduct](./CODE_OF_CONDUCT.md).
+All contributors must follow our [Code of Conduct](./CODE_OF_CONDUCT.md). Harassment, plagiarism, and abuse will not be tolerated.
 
 ---
 
-## 🧵 Join the Docs Community
+## 📬 Need Help?
 
-We welcome async collaboration and active writers. Join us on:
+If you have questions or want feedback before submitting:
 
-* [Telegram](https://t.me/socialblockverify)
-* [X Community](https://x.com/i/communities/1883598415004573838)
+* Join our [Telegram group](https://t.me/socialblockverify)
+* Open a [GitHub Discussion](https://github.com/SocialBlockLTD/socialblock-ai-hackathon/discussions)
+* Mention a maintainer in your PR
 
 ---
 
 ## 💙 Thank You
 
-SocialBlock is built by and for the community. Your contributions to the docs ensure everyone has the knowledge and clarity to build something impactful.
+We’re building this together. Every edit, guide, and example improves the experience for all future builders.
 
-Let’s keep the frontier open and documented ✍️
-
-— The SocialBlock Team
+**Let’s document the future of AI + blockchain.**
 
 ```
